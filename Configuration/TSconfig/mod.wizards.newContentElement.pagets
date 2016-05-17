@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        tx_isant3geshi_ce {
+            icon = ../typo3conf/ext/isan_t3geshi/ext_icon.gif
+            title = GeSHi Sourcecode
+            description = Shows sourcecode with GeShi syntaxhighlighting
+            tt_content_defValues {
+                CType = isant3geshi_ce
+            }
+        }
+    }
+    show := addToList(tx_isant3geshi_ce)
+}
