@@ -54,6 +54,15 @@ class CeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
            $geshi->start_line_numbers_at($settings['startlinenum']);
         }
 
+        // add stylesheet to head (better than inlinestyles)
+        $geshi->enable_classes();
+        $this->response->addAdditionalHeaderData('
+<!-- GeSHi Syntax Highlighter Styles -->
+<style type="text/css">
+'.$geshi->get_stylesheet().'
+</style>
+        ');
+
 
         $this->view->assign('data', $data);
         $this->view->assign('geshi', $geshi->parse_code());
