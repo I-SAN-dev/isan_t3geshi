@@ -7,121 +7,9 @@
         <type>array</type>
         <el>
 
-            <settings.type>
+            <settings.codelang>
                 <TCEforms>
-                    <label>Typ</label>
-                    <config>
-                        <type>select</type>
-                        <items type="array">
-                            <numIndex index="0" type="array">
-                                <numIndex index="0">Default</numIndex>
-                                <numIndex index="1">btn-default</numIndex>
-                            </numIndex>
-                            <numIndex index="1" type="array">
-                                <numIndex index="0">Primary</numIndex>
-                                <numIndex index="1">btn-primary</numIndex>
-                            </numIndex>
-                            <numIndex index="2" type="array">
-                                <numIndex index="0">Success</numIndex>
-                                <numIndex index="1">btn-success</numIndex>
-                            </numIndex>
-                            <numIndex index="3" type="array">
-                                <numIndex index="0">Info</numIndex>
-                                <numIndex index="1">btn-info</numIndex>
-                            </numIndex>
-                            <numIndex index="4" type="array">
-                                <numIndex index="0">Warning</numIndex>
-                                <numIndex index="1">btn-warning</numIndex>
-                            </numIndex>
-                            <numIndex index="5" type="array">
-                                <numIndex index="0">Danger</numIndex>
-                                <numIndex index="1">btn-danger</numIndex>
-                            </numIndex>
-                            <numIndex index="6" type="array">
-                                <numIndex index="0">Link</numIndex>
-                                <numIndex index="1">btn-link</numIndex>
-                            </numIndex>
-                        </items>
-                        <default>btn-default</default>
-                    </config>
-                </TCEforms>
-            </settings.type>
-
-            <settings.size>
-                <TCEforms>
-                    <label>Größe</label>
-                    <config>
-                        <type>select</type>
-                        <items type="array">
-                            <numIndex index="0" type="array">
-                                <numIndex index="0">Normal</numIndex>
-                                <numIndex index="1"></numIndex>
-                            </numIndex>
-                            <numIndex index="1" type="array">
-                                <numIndex index="0">Large</numIndex>
-                                <numIndex index="1">btn-lg</numIndex>
-                            </numIndex>
-                            <numIndex index="2" type="array">
-                                <numIndex index="0">Small</numIndex>
-                                <numIndex index="1">btn-sm</numIndex>
-                            </numIndex>
-                            <numIndex index="3" type="array">
-                                <numIndex index="0">Xtra Small</numIndex>
-                                <numIndex index="1">btn-xs</numIndex>
-                            </numIndex>
-                        </items>
-                        <default></default>
-                    </config>
-                </TCEforms>
-            </settings.size>
-
-            <settings.align>
-                <TCEforms>
-                    <label>Ausrichtung</label>
-                    <config>
-                        <type>radio</type>
-                        <items type="array">
-                            <numIndex index="0" type="array">
-                                <numIndex index="0">Links</numIndex>
-                                <numIndex index="1">text-left</numIndex>
-                            </numIndex>
-                            <numIndex index="1" type="array">
-                                <numIndex index="0">Mitte</numIndex>
-                                <numIndex index="1">text-center</numIndex>
-                            </numIndex>
-                            <numIndex index="2" type="array">
-                                <numIndex index="0">Rechts</numIndex>
-                                <numIndex index="1">text-right</numIndex>
-                            </numIndex>
-                        </items>
-                        <default>left</default>
-                    </config>
-                </TCEforms>
-            </settings.align>
-
-            <settings.block>
-                <TCEforms>
-                    <label>Breite</label>
-                    <config>
-                        <type>radio</type>
-                        <items type="array">
-                            <numIndex index="0" type="array">
-                                <numIndex index="0">wie Text</numIndex>
-                                <numIndex index="1"></numIndex>
-                            </numIndex>
-                            <numIndex index="1" type="array">
-                                <numIndex index="0">100% (btn-block)</numIndex>
-                                <numIndex index="1">btn-block</numIndex>
-                            </numIndex>
-                        </items>
-                        <default></default>
-                    </config>
-                </TCEforms>
-            </settings.block>
-
-            <settings.class>
-                <TCEforms>
-                    <label>Zusätzliche CSS-Klasse</label>
+                    <label>Code Language</label>
                     <config>
                         <type>input</type>
                         <size>255</size>
@@ -129,8 +17,39 @@
                         <eval>trim</eval>
                     </config>
                 </TCEforms>
-            </settings.class>
+            </settings.codelang>
 
+            <settings.linenums>
+                <TCEforms>
+                    <label>Enable line numbers</label>
+                    <config>
+                        <type>radio</type>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">yes</numIndex>
+                                <numIndex index="1">true</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">no</numIndex>
+                                <numIndex index="1">false</numIndex>
+                            </numIndex>
+                        </items>
+                        <default>true</default>
+                    </config>
+                </TCEforms>
+            </settings.linenums>
+
+            <settings.startlinenum>
+                <TCEforms>
+                    <label>Start with line number</label>
+                    <config>
+                        <type>input</type>
+                        <size>7</size>
+                        <max>7</max>
+                        <eval>trim, int</eval>
+                    </config>
+                </TCEforms>
+            </settings.startlinenum>
 
         </el>
     </ROOT>
