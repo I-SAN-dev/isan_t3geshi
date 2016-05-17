@@ -34,15 +34,26 @@ class CeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
          */
         $data = $this->configurationManager->getContentObject()->data;
 
-        $source = '$foo = 45;
-                    for ( $i = 1; $i < $foo; $i++ ){
-                      echo "$foo\n";  --$foo;
-                    }';
-        $language = 'php';
+        /**
+         * @var array() $settings
+         */
+        $settings = $this->settings;
 
         $geshi->set_source($data['bodytext']);
+        $geshi->set_language($settings['codelang']);
 
-        $geshi->set_language($language);
+        // Bootstrap support
+        $geshi->set_header_type(GESHI_HEADER_PRE_TABLE);
+        $geshi->set_overall_class('table');
+
+        if ($settings['linenums']) {
+            $geshi->enable_line_numbers(GESHI_NORMAL_LINE_NUMBERS);
+        }
+
+        if ($settings['startlinenum'] && $settings['startlinenum'] > 0) {
+           $geshi->start_line_numbers_at($settings['startlinenum']);
+        }
+
 
         $this->view->assign('data', $data);
         $this->view->assign('geshi', $geshi->parse_code());

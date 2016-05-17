@@ -10,8 +10,6 @@
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif'
 ), 'CType');
 
-var_dump($GLOBALS['TCA']['tt_content']['types']['isant3geshi_ce']['showitem']);
-
 $GLOBALS['TCA']['tt_content']['types']['isant3geshi_ce']['showitem'] =
     '
 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,

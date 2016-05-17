@@ -31,7 +31,7 @@
                             </numIndex>
                             <numIndex index="1" type="array">
                                 <numIndex index="0">no</numIndex>
-                                <numIndex index="1">false</numIndex>
+                                <numIndex index="1"></numIndex>
                             </numIndex>
                         </items>
                         <default>true</default>
